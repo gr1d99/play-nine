@@ -114,5 +114,12 @@ describe('<Button/>', () => {
             const {wrapper} = setup();
             expect(wrapper.find('button').last().children().hasClass('fa fa-sync-alt')).toBeTruthy()
         });
+
+        it('should call redraw function when clicked', () => {
+            const {wrapper, redraw} = setup();
+            wrapper.find('button').last().simulate('click');
+            expect(redraw).toHaveBeenCalled();
+            expect(redraw).toHaveBeenCalledTimes(1)
+        });
     });
 });
