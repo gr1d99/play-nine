@@ -10,7 +10,7 @@ const Button = (props) => {
             break;
 
         case false:
-            button = <button class="btn btn-warning">
+            button = <button className="btn btn-warning">
                 <i className="fa fa-times"></i></button>;
             break;
 
@@ -25,7 +25,7 @@ const Button = (props) => {
             {button}
             <br/>
             <br/>
-            <button className="btn btn-warning btn-sm text-center"
+            <button className="btn btn-info btn-sm text-center"
                     onClick={props.redraw}>
                 <i className="fa fa-sync-alt"></i>
             </button>
